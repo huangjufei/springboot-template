@@ -1,0 +1,18 @@
+一,项目简介
+该项目是一个springboot项目,基于2.0后版本;
+1,集成阿里连接池,
+2,mybatis,
+3,分页插件,
+4,事务
+5,日志(slf4j,logback没有额外导入jar包,只是引入了配置文件)
+6,properties 参数读取这里使用的@ConfigurationProperties
+7,aop 切面编程;需导入spring-boot-starter-aop,jar包;
+另aop结合注解编程功能更为酷
+
+
+
+二,项目搭建流程
+1, 数据库连接池,mybatis,加分页插件为初始项目时加入,查考的下面链接
+   https://blog.csdn.net/qq_38977097/article/details/80778004
+
+2,事务只需要在方法上添加@Transactional,事务就生效了;不需要添加额外jar
