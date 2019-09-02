@@ -23,7 +23,7 @@ public class UserServiceImpl implements UserService {
     public Integer addUser(UserDomain user) {
         userDao.insert(user);
         if(true){
-            throw new RuntimeException("主动抛出异常!测试事务");
+            throw new RuntimeException("主动抛出异常!测试事务222");
         }
         return userDao.insert(user);
     }

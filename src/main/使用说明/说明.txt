@@ -1,17 +1,19 @@
 一,项目简介
-该项目是一个springboot项目,基于2.0后版本;
+该项目是一个springboot项目,基于2.0后版本;搭建时使用的idea编译器
 1,集成阿里连接池,
 2,mybatis,
-3,分页插件,
+3,分页插件,需要导入pagehelper-spring-boot-starter,jar包
 4,事务
 5,日志(slf4j,logback没有额外导入jar包,只是引入了配置文件)
 6,properties 参数读取这里使用的@ConfigurationProperties
 7,aop 切面编程;需导入spring-boot-starter-aop,jar包;
 另aop结合注解编程功能更为酷
-8,controller层添加了参数效验
+8,controller层添加了参数效验,@Valid+BindingResult
 9,controller层添加了统一返回Result类,add方法上
 10,统一异常捕获,可以自定义异常
 11,定时器
+12,支持热部署,需要导入一个spring-boot-devtools,jar包(idea需要配置2个位置)
+https://www.cnblogs.com/liu2-/p/9118393.html
 
 二,项目搭建流程
 1, 数据库连接池,mybatis,加分页插件为初始项目时加入,查考的下面链接
