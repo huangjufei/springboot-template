@@ -1,4 +1,4 @@
-package com.hjf.properties;
+package com.hjf.utils.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

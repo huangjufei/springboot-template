@@ -8,8 +8,10 @@
 6,properties 参数读取这里使用的@ConfigurationProperties
 7,aop 切面编程;需导入spring-boot-starter-aop,jar包;
 另aop结合注解编程功能更为酷
-
-1111111
+8,controller层添加了参数效验
+9,controller层添加了统一返回Result类,add方法上
+10,统一异常捕获,可以自定义异常
+11,定时器
 
 二,项目搭建流程
 1, 数据库连接池,mybatis,加分页插件为初始项目时加入,查考的下面链接

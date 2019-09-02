@@ -5,7 +5,7 @@ import com.hjf.model.UserDomain;
 
 public interface UserService {
 
-    int addUser(UserDomain user);
+    Integer addUser(UserDomain user);
 
     PageInfo<UserDomain> findAllUser(int pageNum, int pageSize);
 }

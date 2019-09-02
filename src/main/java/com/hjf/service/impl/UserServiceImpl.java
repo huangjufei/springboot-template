@@ -20,10 +20,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
    // @Transactional
-    public int addUser(UserDomain user) {
+    public Integer addUser(UserDomain user) {
         userDao.insert(user);
         if(true){
-            throw new RuntimeException();
+            throw new RuntimeException("主动抛出异常!测试事务");
         }
         return userDao.insert(user);
     }
