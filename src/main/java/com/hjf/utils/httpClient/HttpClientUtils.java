@@ -52,8 +52,10 @@ public class HttpClientUtils {
         nvps.add(new BasicNameValuePair("password", "secret"));
         httpPost.setEntity(new UrlEncodedFormEntity(nvps));
         CloseableHttpResponse response = httpclient.execute(httpPost);
+
         try
         {
+
             System.out.println(response.getStatusLine());
             HttpEntity entity = response.getEntity();
             EntityUtils.consume(entity);

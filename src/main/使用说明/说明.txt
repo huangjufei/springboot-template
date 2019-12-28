@@ -19,6 +19,8 @@ https://www.cnblogs.com/liu2-/p/9118393.html
 参考:https://www.cnblogs.com/smileberry/p/4145872.html
 ;https://blog.csdn.net/isea533/article/details/42102297
 14,添加apache的httpClient和CommonHttpClient(支持后端多文件上传)
+15,utils.springLifeCycle包下有spring,初始化bean生命周期的例子,对于理解spring加载bean流程相当重要
+参考:https://www.iteye.com/blog/uule-2094609
 
 
 二,项目搭建流程
