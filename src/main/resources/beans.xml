@@ -15,5 +15,9 @@
     </bean>  
       
     <bean id="person" class="com.hjf.utils.springLifeCycle.Person" init-method="myInit" destroy-method="myDestory"
-     scope="singleton" p:name="张三" p:phone="232" p:address="广州"  />   
+     scope="singleton" p:name="张三" p:phone="232" p:address="广州"  />
+
+    <!-- 如果有几个bean ,11会被调几次
+    <bean id="student" class="com.hjf.utils.springLifeCycle.Student" p:classes="58" />-->
+
 </beans>  

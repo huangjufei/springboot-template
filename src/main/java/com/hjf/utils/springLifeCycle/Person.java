@@ -59,6 +59,8 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
 	@Override
 	public void setBeanFactory(BeanFactory arg) throws BeansException {
 		System.out.println("10,【BeanFactoryAware接口】调用BeanFactoryAware.setBeanFactory()");
+		Person p = (Person)arg.getBean("person");
+		p.setPhone("我在次修改值10");
 		this.beanFactory = arg;
 	}
 
@@ -66,6 +68,7 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
 	@Override
 	public void setBeanName(String arg) {
 		System.out.println("9,【BeanNameAware接口】调用BeanNameAware.setBeanName()");
+		//arg的值默就是类名小写,但设置id就是以id为准
 		this.beanName = arg;
 	}
 

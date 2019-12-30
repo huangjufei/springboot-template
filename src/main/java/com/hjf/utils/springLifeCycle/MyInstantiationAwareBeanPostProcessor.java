@@ -1,8 +1,11 @@
 package com.hjf.utils.springLifeCycle;
 
-import java.beans.PropertyDescriptor;    
-import org.springframework.beans.BeansException;  
-import org.springframework.beans.PropertyValues;  
+import java.beans.PropertyDescriptor;
+import java.util.Arrays;
+
+import org.springframework.beans.BeansException;
+import org.springframework.beans.PropertyValue;
+import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessorAdapter;  
   
 public class MyInstantiationAwareBeanPostProcessor extends  
@@ -13,12 +16,11 @@ public class MyInstantiationAwareBeanPostProcessor extends
        System.out.println("4,这是InstantiationAwareBeanPostProcessorAdapter实现类构造器！！");  
    }  
  
-   // 接口方法、实例化Bean之前调用  
+   // 接口方法、实例化Bean之前调用(这个时候还没person实例)
    @Override  
    public Object postProcessBeforeInstantiation(Class beanClass,  
            String beanName) throws BeansException {  
-      
-       System.out.println("5,InstantiationAwareBeanPostProcessor调用postProcessBeforeInstantiation方法");  
+       System.out.println("5,InstantiationAwareBeanPostProcessor调用postProcessBeforeInstantiation方法");
        return null;  
    }  
  
@@ -35,7 +37,16 @@ public class MyInstantiationAwareBeanPostProcessor extends
    public PropertyValues postProcessPropertyValues(PropertyValues pvs,  
            PropertyDescriptor[] pds, Object bean, String beanName)  
            throws BeansException {  
-       System.out.println("7,InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法");  
+       System.out.println("7,InstantiationAwareBeanPostProcessor调用postProcessPropertyValues方法");
+       PropertyValue[] p = pvs.getPropertyValues();
+       for(PropertyValue s : p){
+           System.out.println(  s.getName()+"==="+s.getValue());
+           if(s.getName().equals("phone")){
+               s.setAttribute("phone","老子再次修改参数值,然后这里却没改用");
+               s.setAttribute("phone2","设置一个不存在的key,也是没用,但也没报错");
+               System.out.println(  s.getName()+"==="+s.getValue());
+           }
+       }
        return pvs;  
    }  
 }  
