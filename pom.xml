@@ -126,6 +126,19 @@
             <version>1.9</version>
         </dependency>
         <!-- 用使用commons-httpclient,和json包有关 ,end-->
+
+        <!--swagger 只需要引入下面2个依赖-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
     </dependencies>
 
 

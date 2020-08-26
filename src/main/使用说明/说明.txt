@@ -30,7 +30,9 @@ https://www.cnblogs.com/smileberry/p/4145872.html
 15,utils.springLifeCycle包下有spring,初始化bean生命周期的例子,对于理解spring加载bean流程相当重要
 参考:https://www.iteye.com/blog/uule-2094609
 
-二,项目搭建流程
+16,集成swagger
+
+二,该项目搭建流程
 1, 数据库连接池,mybatis,加分页插件为初始项目时加入,查考的下面链接
    https://blog.csdn.net/qq_38977097/article/details/80778004
 

@@ -5,13 +5,13 @@ server:
 spring:
   profiles:
     active: dev
-# 开启热部署
+  # 开启热部署
   devtools:
     restart:
       enabled: true
 
   datasource:
-    name: mysql_test
+    name: mysql
     type: com.alibaba.druid.pool.DruidDataSource
     #druid相关配置
     druid:
@@ -19,9 +19,9 @@ spring:
       filters: stat
       driver-class-name: com.mysql.jdbc.Driver
       #基本属性
-      url: jdbc:mysql://192.168.124.20:3306/springboot?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+      url: jdbc:mysql://127.0.0.1:3306/sso?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
       username: root
-      password: admin123
+      password: hjf,.123
       #配置初始化大小/最小/最大
       initial-size: 1
       min-idle: 1
@@ -42,7 +42,7 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.hjf.model
+  type-aliases-package: com.hjf.dto
 
 #pagehelper
 pagehelper:

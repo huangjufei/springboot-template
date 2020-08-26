@@ -1,7 +1,7 @@
 package com.hjf.service;
 
 import com.github.pagehelper.PageInfo;
-import com.hjf.model.UserDomain;
+import com.hjf.dto.UserDomain;
 
 public interface UserService {
 

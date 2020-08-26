@@ -3,13 +3,11 @@ package com.hjf.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hjf.dao.UserDao;
-import com.hjf.model.UserDomain;
+import com.hjf.dto.UserDomain;
 import com.hjf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.util.List;
 
 @Service(value = "userService")

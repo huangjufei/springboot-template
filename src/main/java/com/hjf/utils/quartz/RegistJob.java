@@ -14,8 +14,8 @@ import java.util.Date;
  * 这个定时器全部就这个方法,有极高的隐蔽性,不需要引入独立jar包
  * 百度云有Quartiz 代码,没有集成到spring项目中;
  */
-@Configuration
-@EnableScheduling
+//@Configuration 打开就可以看到效果
+//@EnableScheduling 打开就可以看到效果
 public class RegistJob implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {

@@ -11,7 +11,7 @@
     userId,userName,password,phone
   </sql>
 
-    <insert id="insert" parameterType="com.hjf.model.UserDomain">
+    <insert id="insert" parameterType="com.hjf.dto.UserDomain">
         INSERT INTO
         <include refid="BASE_TABLE"/>
         <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -28,7 +28,7 @@
         </trim>
     </insert>
 
-    <select id="selectUsers" resultType="com.hjf.model.UserDomain">
+    <select id="selectUsers" resultType="com.hjf.dto.UserDomain">
         SELECT
         <include refid="BASE_COLUMN"/>
         FROM

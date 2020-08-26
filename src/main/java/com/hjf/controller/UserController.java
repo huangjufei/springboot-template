@@ -1,10 +1,11 @@
 package com.hjf.controller;
 
-import com.hjf.model.UserDomain;
+import com.hjf.dto.UserDomain;
 import com.hjf.service.UserService;
 import com.hjf.utils.Result;
 import com.hjf.utils.ResultUtil;
 import com.hjf.utils.properties.BoyProperties;
+import io.swagger.annotations.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,8 @@ import java.util.Map;
 
 @Controller
 @RequestMapping(value = "/user")
+//swagger配置
+@Api(value = "测试ControllerTest", tags = {"测试访问接口"})
 public class UserController {
 
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -36,6 +39,13 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/add")
+    @ApiOperation(value = "添加测试数据")
+    @ApiResponses(value = {
+            @ApiResponse(code = 1000, message = "成功"),
+            @ApiResponse(code = 1001, message = "失败"),
+            @ApiResponse(code = 1002, message = "缺少参数",
+                    response = UserDomain.class)
+    })
     public Result<Integer> addUser(@Valid UserDomain user, BindingResult bindingResult,HttpServletRequest request){
         if (bindingResult.hasErrors()) {
             return ResultUtil.error(1, bindingResult.getFieldError().getDefaultMessage());
@@ -49,6 +59,7 @@ public class UserController {
 
     @ResponseBody
     @GetMapping("/all")
+    @ApiOperation(value = "查询全部")
     public Object findAllUser(@RequestParam(name = "pageNum", required = false, defaultValue = "1") int pageNum,
             @RequestParam(name = "pageSize", required = false, defaultValue = "10") int pageSize){
         logger.info("传入参数:"+pageNum+"--"+pageSize);

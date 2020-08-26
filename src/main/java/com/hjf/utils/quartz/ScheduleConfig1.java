@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * 下面代码来至下面这个url
  * https://www.jianshu.com/p/61e3abc22fbd
  */
-@Configuration
+//@Configuration 打开就可以看到效果
 public class ScheduleConfig1 {
 
     /**
