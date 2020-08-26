@@ -14,6 +14,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ScheduleConfig1 {
 
+    /**
+     * 创建一个JobDetail
+     * @return
+     */
     @Bean
     public JobDetail task1JobDetail() {
         return JobBuilder.newJob(Task1.class)
@@ -21,7 +25,10 @@ public class ScheduleConfig1 {
                 .storeDurably(true)
                 .build();
     }
-
+    /**
+     * 创建一个JobDetail
+     * @return
+     */
     @Bean
     public JobDetail task2JobDetail() {
         return JobBuilder.newJob(Task2.class)
@@ -30,6 +37,10 @@ public class ScheduleConfig1 {
                 .build();
     }
 
+    /**
+     * 关联任务并添加cron执行时间,并设置名字
+     * @return
+     */
     @Bean
     public Trigger task1Trigger() {
         CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("*/40 * * * * ?");
@@ -40,6 +51,10 @@ public class ScheduleConfig1 {
                 .build();
     }
 
+    /**
+     * 关联任务并添加cron执行时间,并设置名字
+     * @return
+     */
     @Bean
     public Trigger task2Trigger() {
         CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("*/40 * * * * ?");

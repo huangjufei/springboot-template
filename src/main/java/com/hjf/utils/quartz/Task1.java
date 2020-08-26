@@ -10,7 +10,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-
+/**
+ * 任务1,被ScheduleConfig1类引用
+ */
 @Component
 //这个注解是使得 quartz 的单任务串行执行，多任务并行执行的关键
 @DisallowConcurrentExecution

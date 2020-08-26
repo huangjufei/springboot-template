@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 
-    <!--数据库驱动-->
+    <!--数据库驱动,这下面的顺序不要调整,会运行失败-->
     <classPathEntry location="C:\Users\Administrator\IdeaProjects\springboot-template\src\main\resources\mysql-connector-java-5.1.46.jar"/>
 
-    <context id="DB2Tables" targetRuntime="MyBatis3">
+    <context id="DB2Tables" targetRuntime="MyBatis3DynamicSql">
 
         <commentGenerator>
             <property name="suppressDate" value="true"/>
@@ -39,9 +39,9 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <!--生成对应表及类名-->
-        <table tableName="girl"
-               domainObjectName="Girl" enableCountByExample="false" enableUpdateByExample="false"
+        <!--生成对应表及类名,生成sso数据库的全部表-->
+        <table tableName="%" schema="sso"
+               enableCountByExample="false" enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>
