@@ -1,4 +1,4 @@
-package com.hjf.utils.base;
+package com.hjf.utils.util;
 
 import java.util.Random;
 

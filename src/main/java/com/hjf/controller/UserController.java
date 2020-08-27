@@ -1,6 +1,6 @@
 package com.hjf.controller;
 
-import com.hjf.dto.UserDomain;
+import com.hjf.entity.UserDomain;
 import com.hjf.service.UserService;
 import com.hjf.utils.Result;
 import com.hjf.utils.ResultUtil;

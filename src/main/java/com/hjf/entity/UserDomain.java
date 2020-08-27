@@ -1,4 +1,4 @@
-package com.hjf.dto;
+package com.hjf.entity;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

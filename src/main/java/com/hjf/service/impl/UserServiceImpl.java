@@ -3,7 +3,7 @@ package com.hjf.service.impl;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.hjf.dao.UserDao;
-import com.hjf.dto.UserDomain;
+import com.hjf.entity.UserDomain;
 import com.hjf.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
 package com.hjf.dao;
 
-import com.hjf.dto.UserDomain;
+import com.hjf.entity.UserDomain;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
